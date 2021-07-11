@@ -15,6 +15,8 @@ namespace Homework_for_lesson_1
 
             foreach (Car car in garage)
             {
+                car.ShowMaxSpeed();
+                car.ShowPrice();
                 string json = System.Text.Json.JsonSerializer.Serialize<Car>(car);
                 Console.WriteLine(json);
                 Console.WriteLine();
@@ -23,7 +25,7 @@ namespace Homework_for_lesson_1
         }
     }
 
-    class Car : ISelling
+    class Car
     {
         public string Brand { get; }
         public string Model { get; }
@@ -49,16 +51,6 @@ namespace Homework_for_lesson_1
         {
             string price = Price.ToString("C", CultureInfo.CreateSpecificCulture("us-US"));
             Console.WriteLine($"{Brand} {Model} costs {price}");
-        }
-
-        public void Sell(string reason, double price)
-        {
-            Console.WriteLine($"Sell {Brand} {Model} because {reason}. The price is {price}");
-        }
-
-        public void Buy(string purpose, double price)
-        {
-            Console.WriteLine($"Buy {Brand} {Model} for {purpose}. The price is {price}");
         }
     }
 }
