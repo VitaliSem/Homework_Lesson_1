@@ -53,4 +53,12 @@ namespace Homework_for_lesson_1
             Console.WriteLine($"{Brand} {Model} costs {price}");
         }
     }
+
+    abstract class Vehicle
+    {
+        public string TypeOfVehicle { get; set; }
+
+        public void GetTypeOfVehicle(){}
+        public void UseVehicle(){}
+    }
 }
