@@ -6,7 +6,7 @@ namespace Homework_for_lesson_1
 {
     interface ISelling
     {
-        public string Sell(string reason, double price);
-        public string Buy(string puprose, double price);
+        public void Sell(string reason, double price);
+        public void Buy(string puprose, double price);
     }
 }
