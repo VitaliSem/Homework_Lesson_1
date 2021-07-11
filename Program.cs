@@ -21,6 +21,10 @@ namespace Homework_for_lesson_1
                 Console.WriteLine(json);
                 Console.WriteLine();
             }
+
+            Boat boat1 = new Boat("yacht");
+            boat1.GetTypeOfVehicle();
+
             Console.ReadLine();
         }
     }
@@ -52,13 +56,5 @@ namespace Homework_for_lesson_1
             string price = Price.ToString("C", CultureInfo.CreateSpecificCulture("us-US"));
             Console.WriteLine($"{Brand} {Model} costs {price}");
         }
-    }
-
-    abstract class Vehicle
-    {
-        public string TypeOfVehicle { get; set; }
-
-        public void GetTypeOfVehicle(){}
-        public void UseVehicle(){}
     }
 }
